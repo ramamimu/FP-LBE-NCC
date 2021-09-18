@@ -36,9 +36,7 @@ nav {
   /* background-size: 50px; */
 }
 nav h2 {
-  text-shadow: 2px 2px 4px white, -2px -2px 4px white, 2px 2px 4px white,
-    0px 2px 4px white, 0px -2px 4px white, -2px 0 4px white, -2px 2px 4px white,
-    2px -2px 4px white;
+  text-shadow: 2px 2px 4px white, -2px -2px 4px white, 2px 2px 4px white, 0px 2px 4px white, 0px -2px 4px white, -2px 0 4px white, -2px 2px 4px white, 2px -2px 4px white;
   color: rgb(41, 8, 63);
   /* padding: 8px; */
   /* text-align: center;
@@ -53,10 +51,9 @@ nav h2 {
 } */
 
 main {
-    background-color: aqua;
+    background-color: blue;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 /* div.spinner {
 } */
@@ -67,12 +64,25 @@ div.spinner-content{
     display: grid;
     align-content: center;
 }
-img#waifu-img{
-    width: 200px;
+div.spinner-content button{
+    /* width: 150px; */
     margin: auto;
-    padding: 50px;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 1.2em;
+    font-family: var(--ff-primary);
+}
+img#waifu-img{
+    width: 300px;
+    margin: auto;
+    padding: 35px;
 }
 div.image-main {
-    /* height: 70%; */
+    /* height: 700px; */
 }
+
+div.coba{
+    /* background-color: blue; */
+}
+
 /* Responsive Query */
