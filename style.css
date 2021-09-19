@@ -1,0 +1,181 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* Variable */
+:root {
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+}
+
+/* Global */
+* {
+  /* border: 1px solid black; */
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body{
+  background: url(assets/img/1.jpg);
+  background-size:cover;
+  background-attachment: fixed;
+}
+/* content */
+nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: grid;
+  text-align: right;
+  padding-right: 100px;
+  align-content: center;
+  font-size: 1.5em;
+  background-repeat: no-repeat;
+  background-image: url(assets/img/logo_genshin_40_white.png);
+  background-position: 50% 50%;
+  background-size: 8em;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+main {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    margin: 50px 80px;
+}
+
+div.image-content{
+  background-color: rgba(0, 0, 0, 0.2);
+  /* border-radius: 2em; */
+  transition: all 0.5s;
+}
+
+div.image-content:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2em;
+}
+
+
+div.carousel-caption h5{
+  opacity: 1;
+  font-size: 40px;
+  font-family: var(--ff-primary);
+  text-align: left;
+}
+
+div.carousel-caption button{
+  position: relative;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 2em;
+  font-family: var(--ff-primary);
+  opacity: 0;
+  transition: all .3s;
+  padding: 10px;
+}
+
+div.image-content:hover button{
+  opacity: 1;
+}
+
+div.image-content button#other:hover{
+  opacity: 1;
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  box-shadow: 0.3px 0.3px 0 white;
+}
+
+div.carousel-caption button:active{
+  top: 5px;
+}
+
+div.carousel-caption button a{
+  text-decoration: none;
+  font-size: 15px;
+}
+#spin{
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0.7);
+  transition: all .5s;
+}
+
+#spin:hover{
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.9)
+}
+
+
+div.spinner-content{
+    display: grid;
+    align-content: center;
+}
+div.spinner-content button{
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 1.2em;
+    font-family: var(--ff-primary);
+}
+img#waifu-img{
+    width: 300px;
+    margin: auto;
+    padding: 35px;
+}
+
+div.table{
+  display: flex;
+  justify-content: center;
+  display: none;
+  transition: all .5s;
+}
+
+td{
+  color: white;
+}
+
+.show{
+  display: block!important;
+}
+
+table{
+  margin: auto;
+  width: 80%;
+  text-align: center;
+}
+
+tr:nth-child(even){
+  background-color: aqua;
+}
+
+tr:nth-child(odd){
+  background-color: white;
+}
+
+/* Responsive Query */
+@media screen and (min-width: 1000px) {
+  .container{
+    max-width: 70%;
+  }
+  .image-content{
+    max-width: 70%;
+    margin: auto;
+  }
+  #table{
+    max-width: 70%;
+    margin: auto;
+  }
+  .image-content{
+    position: relative;
+    top: 0;
+  }
+}
