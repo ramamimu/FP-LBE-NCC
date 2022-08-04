@@ -30,18 +30,18 @@ $index = count($data);
                           <div class="carousel-item active" data-bs-interval="10000">
                           <img src="
                           <?php
-                          echo $data[0][1];
+                          echo $data[0][2];
                           ?>            
                           " class="d-block w-100" alt="">
                           <div class="carousel-caption d-md-block">
                               <h5>
                               <?php
-                              echo strtoupper($data[0][0]);
+                              echo strtoupper($data[0][1]);
                               ?>    
                               </h5>
                               <button type="button" id="other"><a href="
                               <?php
-                                  echo $data[0][2];
+                                  echo $data[0][3];
                               ?>                    
                               " target="_blank">Read More</a></button>
                           </div>    
@@ -53,18 +53,18 @@ $index = count($data);
                           <div class="carousel-item" data-bs-interval="2000">
                           <img src="
                           <?php
-                          echo $data[$i][1];
+                          echo $data[$i][2];
                           ?>
                           " class="d-block w-100" alt="">
                           <div class="carousel-caption d-md-block">
                               <h5>
                               <?php
-                              echo strtoupper($data[$i][0]);
+                              echo strtoupper($data[$i][1]);
                               ?>    
                               </h5>
                               <button type="button" id="other"><a href="
                               <?php
-                                  echo $data[$i][2];
+                                  echo $data[$i][3];
                               ?>                    
                               " target="_blank">Read More</a></button>
                           </div>    
@@ -109,17 +109,17 @@ $index = count($data);
             <tr>
               <td>
                 <?php 
-                echo $data[$i][0];
+                echo $data[$i][1];
                 ?>
               </td>
               <td><a href="
               <?php
-              echo $data[$i][1];
+              echo $data[$i][2];
               ?>
               " target="_blank">char image</a></td>
               <td><a href="
               <?php 
-              echo $data[$i][2];
+              echo $data[$i][3];
               ?>
               " target="_blank">more info</a></td>
             </tr>

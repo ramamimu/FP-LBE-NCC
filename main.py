@@ -4,7 +4,6 @@ import requests
 import mysql.connector
 
 html_text = requests.get('https://www.gensh.in/characters')
-print(html_text)
 soup = BeautifulSoup(html_text.text, "html.parser")
 
 def desc_link(numb):
@@ -13,7 +12,14 @@ def desc_link(numb):
     index = len(desc_link)
     i = 0
     while (i<index):
-        desc_link[i]="https:/www.gensh.in"+desc_link[i].a['href']
+        try:
+            desc_link[i]="https:/www.gensh.in"+desc_link[i].a['href']
+        except:
+            print("Error desc")
+            desc_link[i]=""
+
+        if desc_link[i].find("/characters/") == -1:
+            desc_link[i]=""
         i+=1
     if(numb==1):
         return desc_link
@@ -22,17 +28,21 @@ def desc_link(numb):
 
 def images_ch():
     global soup
-    images_ch=soup.select('img[class*="img-fluid"]')
+    images_ch=soup.select('div[class="card-body character-image"]')
     index_ch = len(images_ch)
     i = 0
     while (i<index_ch):
-        images_ch[i]="https:/www.gensh.in"+images_ch[i]['src']
+        try:
+            images_ch[i]="https:/www.gensh.in"+images_ch[i].img['src']
+        except:
+            print("Error images")
+            images_ch[i]=""
         i+=1
     return images_ch
 
 def name_ch():
     global soup
-    name_ch = soup.select('div[class*="nameblock"]')
+    name_ch = soup.select('div[class="nameblock"]')
     index_name = len(name_ch)
     i=0
     while (i<index_name):
